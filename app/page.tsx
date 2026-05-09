@@ -183,9 +183,9 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between text-sm text-slate-500">
           <div>© 2026 NotesClaim. Made for Australian support workers.</div>
           <div className="flex gap-6 mt-3 sm:mt-0">
-            <a href="#" className="hover:text-ink">Privacy</a>
-            <a href="#" className="hover:text-ink">Terms</a>
-            <a href="mailto:hello@notesclaim.com.au" className="hover:text-ink">Contact</a>
+            <a href="/privacy" className="hover:text-ink">Privacy</a>
+            <a href="/terms" className="hover:text-ink">Terms</a>
+            <a href="mailto:techrunch@hotmail.com" className="hover:text-ink">Contact</a>
           </div>
         </div>
       </footer>

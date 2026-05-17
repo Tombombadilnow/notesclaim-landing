@@ -24,8 +24,7 @@ export default function Privacy() {
             NotesClaim is an Australian mobile app built for NDIS support workers and sole traders. It helps you document shifts, generate progress notes, and create invoices.
           </p>
           <p className="text-slate-700 leading-relaxed mt-3">
-            <strong>Developer:</strong> Bryan Lowe, ABN 50 542 187 465
-            {/* TODO before launch: swap with registered business name if applicable */}
+            <strong>Developer:</strong> Bryan Lowe, ABN 50 542 187 465 (sole trader)
           </p>
           <p className="text-slate-700 leading-relaxed mt-1">
             <strong>Contact:</strong>{" "}

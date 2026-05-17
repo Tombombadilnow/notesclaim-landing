@@ -25,8 +25,7 @@ export default function Terms() {
             <Link href="/privacy" className="text-primary hover:underline">Privacy Policy</Link>. If you do not agree, do not use the app.
           </p>
           <p className="text-slate-700 leading-relaxed mt-3">
-            These terms form a legally binding agreement between you (the user) and the developer of NotesClaim: Bryan Lowe, ABN 50 542 187 465, <a href="mailto:techrunch@hotmail.com" className="text-primary hover:underline">techrunch@hotmail.com</a>.
-            {/* TODO before launch: swap with registered business name if applicable */}
+            These terms form a legally binding agreement between you (the user) and the developer of NotesClaim: Bryan Lowe (sole trader), ABN 50 542 187 465, <a href="mailto:techrunch@hotmail.com" className="text-primary hover:underline">techrunch@hotmail.com</a>.
           </p>
         </section>
 

@@ -25,7 +25,7 @@ export default function Terms() {
             <Link href="/privacy" className="text-primary hover:underline">Privacy Policy</Link>. If you do not agree, do not use the app.
           </p>
           <p className="text-slate-700 leading-relaxed mt-3">
-            These terms form a legally binding agreement between you (the user) and the developer of NotesClaim: Bryan Lowe (sole trader), ABN 50 542 187 465, <a href="mailto:techrunch@hotmail.com" className="text-primary hover:underline">techrunch@hotmail.com</a>.
+            These terms form a legally binding agreement between you (the user) and the developer of NotesClaim: Joshua Moret (sole trader), ABN 50 542 187 465, <a href="mailto:techrunch@hotmail.com" className="text-primary hover:underline">techrunch@hotmail.com</a>.
           </p>
         </section>
 
@@ -180,7 +180,7 @@ export default function Terms() {
           <div className="mt-3 space-y-1 text-slate-700">
             <p><strong>Email:</strong> <a href="mailto:techrunch@hotmail.com" className="text-primary hover:underline">techrunch@hotmail.com</a></p>
             <p><strong>App:</strong> NotesClaim — NDIS Support Worker Tools</p>
-            <p><strong>Developer:</strong> Bryan Lowe, ABN 50 542 187 465</p>
+            <p><strong>Developer:</strong> Joshua Moret, ABN 50 542 187 465</p>
           </div>
         </section>
 

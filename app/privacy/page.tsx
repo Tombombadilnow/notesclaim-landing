@@ -24,7 +24,7 @@ export default function Privacy() {
             NotesClaim is an Australian mobile app built for NDIS support workers and sole traders. It helps you document shifts, generate progress notes, and create invoices.
           </p>
           <p className="text-slate-700 leading-relaxed mt-3">
-            <strong>Developer:</strong> Bryan Lowe, ABN 50 542 187 465 (sole trader)
+            <strong>Developer:</strong> Joshua Moret, ABN 50 542 187 465 (sole trader)
           </p>
           <p className="text-slate-700 leading-relaxed mt-1">
             <strong>Contact:</strong>{" "}
@@ -204,7 +204,7 @@ export default function Privacy() {
           <div className="mt-3 space-y-1 text-slate-700">
             <p><strong>Email:</strong> <a href="mailto:techrunch@hotmail.com" className="text-primary hover:underline">techrunch@hotmail.com</a></p>
             <p><strong>App:</strong> NotesClaim — NDIS Support Worker Tools</p>
-            <p><strong>Developer:</strong> Bryan Lowe, ABN 50 542 187 465</p>
+            <p><strong>Developer:</strong> Joshua Moret, ABN 50 542 187 465</p>
           </div>
           <p className="text-slate-500 text-sm mt-6 italic">This privacy policy was written in plain English intentionally. If you have a question that isn't answered here, just email us.</p>
         </section>

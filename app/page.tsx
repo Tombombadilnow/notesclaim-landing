@@ -1,191 +1,202 @@
 export default function Home() {
   return (
-    <main>
-      {/* Nav */}
-      <nav className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold">N</div>
-          <span className="font-bold text-lg">NotesClaim</span>
-        </div>
-        <div className="flex items-center gap-6 text-sm">
-          <a href="#features" className="text-slate-600 hover:text-ink hidden sm:block">Features</a>
-          <a href="#pricing" className="text-slate-600 hover:text-ink hidden sm:block">Pricing</a>
-          <a href="#signup" className="bg-primary text-white px-4 py-2 rounded-lg font-medium hover:opacity-90">
-            Join Beta
+    <main className="bg-white text-slate-800" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+      {/* Navbar */}
+      <nav className="border-b border-slate-100 bg-white sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <svg width="52" height="52" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M35 25 L75 25 L90 65 L75 105 L35 105 L20 65 Z"
+                stroke="#0f172a"
+                strokeWidth="18"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M65 45 Q85 55 92 70"
+                fill="none"
+                stroke="#d4af77"
+                strokeWidth="18"
+                strokeLinecap="round"
+              />
+            </svg>
+            <span
+              className="text-3xl font-bold tracking-tight"
+              style={{ color: "#0f172a", fontFamily: "'Playfair Display', serif" }}
+            >
+              NotesClaim
+            </span>
+          </div>
+
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a href="#how" className="hover:text-slate-500 transition">How it works</a>
+            <a href="#features" className="hover:text-slate-500 transition">Features</a>
+            <a href="#pricing" className="hover:text-slate-500 transition">Pricing</a>
+            <a href="#sole-traders" className="hover:text-slate-500 transition">For sole traders</a>
+          </div>
+
+          <a
+            href="#join"
+            className="px-6 py-3 bg-slate-900 hover:bg-black text-white rounded-2xl font-semibold text-sm transition inline-flex items-center gap-2"
+          >
+            Join the beta
+            <span aria-hidden>→</span>
           </a>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="max-w-6xl mx-auto px-6 pt-16 pb-24 text-center">
-        <div className="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-6">
-          Built for unregistered sole trader support workers
-        </div>
-        <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
-          Voice to NDIS note in <span className="text-primary">under 60 seconds.</span>
-        </h1>
-        <p className="mt-6 text-xl text-slate-600 max-w-2xl mx-auto">
-          Speak your shift. Get a compliant progress note and an invoice with the right NDIS code. No templates.
-          No retyping. No ChatGPT copy-paste dance.
-        </p>
-        <div className="mt-10 flex items-center justify-center gap-4">
-          <a href="#signup" className="bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90">
-            Join the beta — $9.99/mo
-          </a>
-          <a href="#demo" className="text-slate-700 font-medium hover:text-ink">
-            See how it works →
-          </a>
-        </div>
-        <p className="mt-4 text-sm text-slate-500">Free 14-day trial · Cancel anytime · No card for beta</p>
-      </section>
-
-      {/* vs ChatGPT — #4 positioning moat */}
-      <section id="demo" className="bg-slate-50 border-y border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 py-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">
-            Already using ChatGPT for notes? Here&apos;s what&apos;s different.
-          </h2>
-          <p className="text-center text-slate-600 mt-4 max-w-2xl mx-auto">
-            ChatGPT is a writing tool. NotesClaim is a compliance tool that knows your clients, your plan goals, and
-            your NDIS price guide.
-          </p>
-
-          <div className="mt-12 grid md:grid-cols-2 gap-6">
-            <div className="bg-white border border-slate-200 rounded-2xl p-6">
-              <div className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">ChatGPT</div>
-              <ul className="space-y-3 text-slate-700">
-                <li className="flex gap-3"><span className="text-red-500">✕</span> You type out the prompt every time</li>
-                <li className="flex gap-3"><span className="text-red-500">✕</span> Doesn&apos;t know your clients or their plan goals</li>
-                <li className="flex gap-3"><span className="text-red-500">✕</span> No NDIS price guide, no invoicing</li>
-                <li className="flex gap-3"><span className="text-red-500">✕</span> No audit trail, no storage</li>
-                <li className="flex gap-3"><span className="text-red-500">✕</span> Uses your data for training (privacy risk)</li>
-                <li className="flex gap-3"><span className="text-red-500">✕</span> Hallucinates goal names and NDIS codes</li>
-              </ul>
+      <header
+        className="text-white py-20 md:py-28"
+        style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e2937 100%)" }}
+      >
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-5 py-2 rounded-3xl text-sm">
+              <span className="bg-emerald-400 text-emerald-950 text-[10px] font-bold px-2 py-px rounded">NEW</span>
+              <span className="font-medium">Built for unregistered sole traders in Australia</span>
             </div>
 
-            <div className="bg-white border-2 border-primary rounded-2xl p-6 relative">
-              <div className="absolute -top-3 left-6 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
-                NotesClaim
-              </div>
-              <div className="text-sm font-bold text-primary uppercase tracking-wider mb-4">NotesClaim</div>
-              <ul className="space-y-3 text-slate-700">
-                <li className="flex gap-3"><span className="text-primary">✓</span> Speak naturally — no prompt engineering</li>
-                <li className="flex gap-3"><span className="text-primary">✓</span> Knows every client&apos;s plan goals, links them automatically</li>
-                <li className="flex gap-3"><span className="text-primary">✓</span> Live NDIS price guide, invoice with one tap</li>
-                <li className="flex gap-3"><span className="text-primary">✓</span> All notes stored, searchable, audit-ready</li>
-                <li className="flex gap-3"><span className="text-primary">✓</span> Sydney data centre, not used for training</li>
-                <li className="flex gap-3"><span className="text-primary">✓</span> Validates codes before you send — no overclaims</li>
-              </ul>
+            <h1 className="text-5xl md:text-6xl font-semibold tracking-tighter leading-none">
+              Voice to NDIS note<br />
+              in <span style={{ color: "#d4af77" }}>under 60 seconds</span>
+            </h1>
+
+            <p className="text-xl text-slate-300 max-w-lg">
+              Speak what happened during your shift. Get a proper STAR-formatted progress note{" "}
+              <span className="text-white font-medium">and</span> a compliant invoice with the correct NDIS code.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#join"
+                className="px-7 py-4 bg-white text-slate-900 hover:bg-slate-100 rounded-2xl font-semibold transition inline-flex items-center justify-center gap-2"
+              >
+                Join the beta
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="#how"
+                className="px-7 py-4 border border-white/20 hover:bg-white/10 text-white rounded-2xl font-semibold transition inline-flex items-center justify-center gap-2"
+              >
+                See how it works
+              </a>
+            </div>
+
+            <div className="flex items-center gap-6 text-sm text-slate-400 pt-2">
+              <span>🇦🇺 Australian-made</span>
+              <span>🔒 Data stays in Australia</span>
+              <span>✓ You review every note</span>
+            </div>
+          </div>
+
+          {/* Hero visual placeholder — designer to refine */}
+          <div className="hidden md:flex items-center justify-center">
+            <div className="w-full max-w-sm aspect-[9/16] rounded-3xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10 flex items-center justify-center text-slate-500 text-sm">
+              [ Phone mockup placeholder ]
             </div>
           </div>
         </div>
-      </section>
+      </header>
 
-      {/* Features */}
-      <section id="features" className="max-w-6xl mx-auto px-6 py-24">
-        <h2 className="text-3xl md:text-4xl font-bold text-center">Everything a sole trader support worker needs.</h2>
-        <p className="text-center text-slate-600 mt-4 max-w-2xl mx-auto">
-          One app. Notes, invoices, clients, service agreements. Nothing else to subscribe to.
+      {/* How it works */}
+      <section id="how" className="py-20 max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl font-semibold tracking-tight text-center mb-4" style={{ color: "#0f172a" }}>
+          Three steps. Under a minute.
+        </h2>
+        <p className="text-center text-slate-500 max-w-2xl mx-auto mb-16">
+          No templates. No retyping. No ChatGPT copy-paste dance.
         </p>
 
-        <div className="mt-16 grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {[
-            {
-              icon: "🎙️",
-              title: "Voice to note",
-              body: "Record 30 seconds of what happened. AI writes a STAR-formatted, goal-linked progress note you can edit before approving.",
-            },
-            {
-              icon: "💸",
-              title: "Invoice in one tap",
-              body: "From an approved note, generate an NDIS-compliant invoice with the right line item code. Pre-validated against the price guide.",
-            },
-            {
-              icon: "🛡️",
-              title: "Compliance built-in",
-              body: "Live audit score on every note. Catches vague language, missing goal links, and placeholder text before your coordinator does.",
-            },
-            {
-              icon: "📁",
-              title: "Client hub",
-              body: "All notes, invoices, service agreements, and documents for each client in one place. Tap a name, see everything.",
-            },
-            {
-              icon: "📤",
-              title: "One-tap share",
-              body: "Send both the note and its invoice to a support coordinator in one action. Saves 10 minutes per shift.",
-            },
-            {
-              icon: "🔁",
-              title: "Import old notes",
-              body: "Already have notes in Word, email, or another app? Paste them in — we reshape them into NotesClaim format.",
-            },
-          ].map((f, i) => (
-            <div key={i} className="rounded-2xl border border-slate-200 p-6">
-              <div className="text-3xl mb-3">{f.icon}</div>
-              <h3 className="font-bold text-lg">{f.title}</h3>
-              <p className="text-slate-600 mt-2 leading-relaxed">{f.body}</p>
+            { num: "01", title: "Speak your shift", body: "Tap the mic, say what happened. 30 seconds is enough." },
+            { num: "02", title: "We write the note", body: "STAR-formatted, person-centred, NDIS-style language." },
+            { num: "03", title: "Invoice in one tap", body: "Correct NDIS support code and pricing auto-filled." },
+          ].map((step) => (
+            <div key={step.num} className="p-8 rounded-3xl border border-slate-200 hover:border-slate-300 transition">
+              <div className="text-sm font-bold mb-4" style={{ color: "#d4af77" }}>{step.num}</div>
+              <h3 className="text-xl font-semibold mb-3" style={{ color: "#0f172a" }}>{step.title}</h3>
+              <p className="text-slate-600">{step.body}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Pricing */}
-      <section id="pricing" className="bg-slate-50 border-y border-slate-200">
-        <div className="max-w-4xl mx-auto px-6 py-24 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold">Simple pricing. One plan.</h2>
-          <p className="text-slate-600 mt-4">Less than the cost of one billed hour per month.</p>
-
-          <div className="mt-12 bg-white rounded-3xl border-2 border-primary p-10 max-w-md mx-auto">
-            <div className="text-5xl font-bold">$9.99<span className="text-lg text-slate-500 font-normal">/month</span></div>
-            <div className="text-sm text-slate-500 mt-1">AUD · GST included</div>
-            <ul className="mt-8 space-y-3 text-left">
-              <li className="flex gap-3"><span className="text-primary">✓</span> Unlimited notes &amp; invoices</li>
-              <li className="flex gap-3"><span className="text-primary">✓</span> Unlimited clients</li>
-              <li className="flex gap-3"><span className="text-primary">✓</span> Voice AI, compliance audit, invoice pre-validation</li>
-              <li className="flex gap-3"><span className="text-primary">✓</span> Sydney data centre, AU privacy compliant</li>
-              <li className="flex gap-3"><span className="text-primary">✓</span> 14-day free trial</li>
-            </ul>
-            <a href="#signup" className="mt-8 inline-block bg-primary text-white px-8 py-3 rounded-xl font-semibold hover:opacity-90">
-              Start free trial
-            </a>
+      {/* Features */}
+      <section id="features" className="py-20 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-semibold tracking-tight text-center mb-16" style={{ color: "#0f172a" }}>
+            Built for the way sole traders actually work
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Audit Pre-Check", body: "We flag the things auditors commonly question — before you submit." },
+              { title: "STAR format", body: "Person-centred, measurable, goal-linked progress notes by default." },
+              { title: "Client hub", body: "All notes, invoices and documents organised by participant." },
+              { title: "Photo to note", body: "Snap handwritten notes — we transcribe and structure them." },
+              { title: "Service agreements", body: "Generate compliant agreements from a few quick prompts." },
+              { title: "Medication logs", body: "Log medication administration with PDF audit trail." },
+            ].map((f) => (
+              <div key={f.title} className="p-6 rounded-2xl bg-white border border-slate-200">
+                <h3 className="font-semibold mb-2" style={{ color: "#0f172a" }}>{f.title}</h3>
+                <p className="text-sm text-slate-600">{f.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Signup */}
-      <section id="signup" className="max-w-3xl mx-auto px-6 py-24 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold">Join the beta.</h2>
-        <p className="text-slate-600 mt-4">
-          We&apos;re onboarding 50 unregistered sole trader support workers in April 2026. Drop your email and we&apos;ll send the APK.
-        </p>
-        <form
-          action="https://formspree.io/f/YOUR_FORM_ID"
-          method="POST"
-          className="mt-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-        >
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="you@example.com"
-            className="flex-1 px-4 py-3 rounded-xl border border-slate-300 focus:border-primary focus:outline-none"
-          />
-          <button className="bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90">
-            Request access
-          </button>
-        </form>
-        <p className="text-xs text-slate-500 mt-4">We&apos;ll email you when your spot opens. No spam.</p>
+      {/* Pricing */}
+      <section id="pricing" className="py-20 max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl font-semibold tracking-tight text-center mb-16" style={{ color: "#0f172a" }}>
+          Honest pricing for sole traders
+        </h2>
+        <div className="max-w-md mx-auto p-8 rounded-3xl border-2" style={{ borderColor: "#d4af77" }}>
+          <div className="text-sm font-semibold mb-2" style={{ color: "#d4af77" }}>PRO</div>
+          <div className="flex items-baseline gap-1 mb-4">
+            <span className="text-5xl font-bold" style={{ color: "#0f172a" }}>$9.99</span>
+            <span className="text-slate-500">/month AUD</span>
+          </div>
+          <p className="text-slate-600 mb-6">Unlimited notes. Unlimited invoices. Cancel anytime.</p>
+          <a
+            href="#join"
+            className="block text-center w-full py-4 bg-slate-900 hover:bg-black text-white rounded-2xl font-semibold transition"
+          >
+            Join the beta
+          </a>
+          <p className="text-xs text-slate-400 mt-4 text-center">
+            Free for all beta testers. Pricing locked in for early adopters.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="join" className="py-20" style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e2937 100%)" }}>
+        <div className="max-w-3xl mx-auto px-6 text-center text-white">
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
+            Less admin. <span style={{ color: "#d4af77" }}>More care.</span>
+          </h2>
+          <p className="text-slate-300 mb-8 text-lg">
+            Be one of the first NDIS sole traders to try NotesClaim. Beta access is free.
+          </p>
+          <a
+            href="mailto:techrunch@hotmail.com?subject=Beta access — NotesClaim"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 hover:bg-slate-100 rounded-2xl font-semibold transition"
+          >
+            Get beta access
+            <span aria-hidden>→</span>
+          </a>
+        </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200">
-        <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between text-sm text-slate-500">
+      <footer className="py-12 border-t border-slate-100">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
           <div>© 2026 NotesClaim. Made for Australian support workers.</div>
-          <div className="flex gap-6 mt-3 sm:mt-0">
-            <a href="/privacy" className="hover:text-ink">Privacy</a>
-            <a href="/terms" className="hover:text-ink">Terms</a>
-            <a href="mailto:techrunch@hotmail.com" className="hover:text-ink">Contact</a>
+          <div className="flex gap-6">
+            <a href="/privacy" className="hover:text-slate-700">Privacy</a>
+            <a href="/terms" className="hover:text-slate-700">Terms</a>
           </div>
         </div>
       </footer>

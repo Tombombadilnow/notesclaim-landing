@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
-import Image from "next/image";
 import { Logo } from "@/components/landing/Logo";
 import { FAQ } from "@/components/landing/FAQ";
 import { FlyerHero } from "@/components/landing/FlyerHero";
 import { FlyerStory } from "@/components/landing/FlyerStory";
 import { FlyerTrustBar } from "@/components/landing/FlyerTrustBar";
+import { WhyChooseBanner } from "@/components/landing/WhyChooseBanner";
 
 function CtaButton({
   href,
@@ -43,8 +43,8 @@ export default function Home() {
             <a href="#story" className="hover:text-navy">
               Features
             </a>
-            <a href="#flyer" className="hover:text-navy">
-              Overview
+            <a href="#why" className="hover:text-navy">
+              Why us
             </a>
             <a href="#pricing" className="hover:text-navy">
               Pricing
@@ -61,22 +61,7 @@ export default function Home() {
 
       <FlyerStory />
 
-      {/* Full flyer — matches print / share asset */}
-      <section id="flyer" className="border-y border-navy/10 bg-white py-12 md:py-16">
-        <div className="mx-auto max-w-md px-6 text-center">
-          <h2 className="text-lg font-bold text-navy">Shareable overview</h2>
-          <p className="mt-2 text-sm text-navy/70">Same design you can show plan managers and coordinators.</p>
-          <div className="mt-8 overflow-hidden rounded-2xl shadow-card ring-1 ring-navy/10">
-            <Image
-              src="/images/notesclaim-flyer.png"
-              alt="NC NotesClaim — NDIS made simple for frontline heroes"
-              width={720}
-              height={1400}
-              className="h-auto w-full"
-            />
-          </div>
-        </div>
-      </section>
+      <WhyChooseBanner />
 
       <section id="pricing" className="bg-cream py-16 md:py-20">
         <div className="mx-auto max-w-md px-6 text-center">

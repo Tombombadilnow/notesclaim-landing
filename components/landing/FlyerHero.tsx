@@ -39,18 +39,16 @@ function IconPeople() {
 export function FlyerHero() {
   return (
     <header className="overflow-hidden bg-cream">
-      {/* Brand header — cream */}
-      <div className="px-6 pb-6 pt-10 text-center md:pt-12">
+      <div className="px-6 pb-4 pt-8 text-center md:pt-10">
         <NCMark />
         <p className="mt-3 text-sm font-medium text-navy/75 md:text-base">
           NDIS Made Simple for Frontline Heroes
         </p>
       </div>
 
-      {/* Hero row */}
-      <div className="relative mx-auto grid max-w-6xl items-end gap-6 px-6 pb-0 md:grid-cols-2 md:gap-10">
-        <div className="relative z-10 order-2 pb-8 md:order-1 md:pb-12">
-          <div className="flex items-start gap-4">
+      <div className="flex flex-col md:min-h-[min(72vh,680px)] md:flex-row">
+        <div className="relative z-10 order-2 flex flex-1 flex-col justify-center px-6 py-8 md:order-1 md:py-12 md:pl-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] md:pr-10">
+          <div className="mx-auto flex w-full max-w-md items-start gap-4 md:mx-0 md:max-w-lg">
             <div className="flex flex-col items-center gap-5 pt-2">
               <IconNote />
               <div className="h-10 w-px border-l-2 border-dashed border-brand-teal/50" />
@@ -64,21 +62,22 @@ export function FlyerHero() {
           </div>
         </div>
 
-        <div className="relative order-1 md:order-2">
-          <div className="overflow-hidden rounded-t-3xl shadow-xl ring-1 ring-navy/10">
-            <Image
-              src="/images/notesclaim-flyer.png"
-              alt="NotesClaim — built for NDIS support workers"
-              width={720}
-              height={900}
-              className="h-auto w-full max-h-[min(520px,70vh)] object-cover object-top"
-              priority
-            />
-          </div>
+        <div className="relative order-1 h-[min(52vh,420px)] w-full md:order-2 md:h-auto md:min-h-[min(72vh,680px)] md:flex-1">
+          <Image
+            src="/images/hero-founder.png"
+            alt="NDIS support worker — NotesClaim is built for frontline heroes"
+            fill
+            className="object-cover object-[55%_15%] md:object-[50%_12%]"
+            sizes="(max-width: 768px) 100vw, 55vw"
+            priority
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-cream via-cream/40 to-transparent md:via-cream/20"
+            aria-hidden
+          />
         </div>
       </div>
 
-      {/* Teal wave into navy headline */}
       <div className="relative -mb-px leading-[0]">
         <svg viewBox="0 0 1440 56" preserveAspectRatio="none" className="block h-10 w-full md:h-14">
           <path fill="#4fafb0" fillOpacity="0.35" d="M0,32 C480,56 960,8 1440,40 L1440,56 L0,56 Z" />

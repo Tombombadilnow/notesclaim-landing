@@ -1,34 +1,11 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { Logo } from "@/components/landing/Logo";
 import { PhoneMockup } from "@/components/landing/PhoneMockup";
 import { FAQ } from "@/components/landing/FAQ";
-
-const features = [
-  {
-    bg: "bg-card-yellow",
-    emoji: "🎤",
-    title: "Voice-first case notes",
-    body: "Speak your shift on the drive home. NotesClaim turns it into a structured NDIS progress note — ready for you to review.",
-  },
-  {
-    bg: "bg-card-blue",
-    emoji: "🛡️",
-    title: "Audit Readiness Guide",
-    body: "Green ticks and plain-language guidance before you send. A helper to stay ready — not an official assessment.",
-  },
-  {
-    bg: "bg-card-mint",
-    emoji: "🧾",
-    title: "Invoice in one tap",
-    body: "Approve your note, then create a pre-filled invoice with the right NDIS code and line items.",
-  },
-  {
-    bg: "bg-card-lavender",
-    emoji: "📁",
-    title: "Everything in one place",
-    body: "Clients, notes, invoices, agreements, and documents — organised for sole traders, not agencies.",
-  },
-];
+import { FlyerHero } from "@/components/landing/FlyerHero";
+import { FlyerStory } from "@/components/landing/FlyerStory";
+import { FlyerTrustBar } from "@/components/landing/FlyerTrustBar";
 
 const testimonials = [
   {
@@ -80,7 +57,7 @@ function CtaButton({
   const styles =
     variant === "white"
       ? `${base} bg-white text-ink hover:bg-slate-100`
-      : `${base} bg-band-purple text-white hover:bg-band-deep shadow-lg shadow-band-purple/25`;
+      : `${base} bg-teal text-white hover:bg-teal-dark shadow-lg shadow-teal/30`;
   return (
     <a href={href} className={styles}>
       {children}
@@ -93,17 +70,20 @@ export default function Home() {
   return (
     <main className="text-ink">
       {/* Promo bar */}
-      <div className="bg-[#fff4cc] py-2.5 text-center text-sm font-medium text-ink">
+      <div className="bg-gold/30 py-2.5 text-center text-sm font-semibold text-teal-dark">
         ✨ Beta is free for early NDIS sole traders — lock in founding-member pricing
       </div>
 
       {/* Nav */}
-      <nav className="sticky top-0 z-50 border-b border-white/60 bg-white/80 backdrop-blur-md">
+      <nav className="sticky top-0 z-50 border-b border-teal/10 bg-white/95 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
           <Logo />
           <div className="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
-            <a href="#features" className="hover:text-ink">
+            <a href="#story" className="hover:text-ink">
               Features
+            </a>
+            <a href="#flyer" className="hover:text-ink">
+              Overview
             </a>
             <a href="#compare" className="hover:text-ink">
               Why us
@@ -119,67 +99,42 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero */}
-      <header className="hero-sky-bg relative overflow-hidden pb-16 pt-10 md:pb-24 md:pt-14">
-        <div className="pointer-events-none absolute inset-0 opacity-60">
-          <span className="absolute left-[8%] top-[18%] text-2xl">✦</span>
-          <span className="absolute right-[12%] top-[12%] text-3xl">☁️</span>
-          <span className="absolute right-[20%] top-[28%] text-xl">✦</span>
+      <FlyerHero />
+
+      <FlyerStory />
+
+      <section id="flyer" className="bg-white py-12 md:py-16">
+        <div className="mx-auto max-w-md px-6 text-center">
+          <h2 className="font-serif-display text-2xl font-bold text-ink">Your overview at a glance</h2>
+          <p className="mt-2 text-sm text-slate-600">The same message workers see in the field — save or share.</p>
+          <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200 shadow-card">
+            <Image
+              src="/images/notesclaim-flyer.png"
+              alt="NotesClaim promotional flyer for NDIS support workers"
+              width={600}
+              height={1200}
+              className="h-auto w-full"
+            />
+          </div>
         </div>
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
-          <div className="space-y-6">
-            <p className="text-sm font-semibold text-lavender">Built for unregistered sole traders · 🇦🇺 Australian servers</p>
-            <h1 className="font-serif-display text-4xl font-bold leading-[1.05] tracking-tight text-ink md:text-6xl">
-              Your smart NDIS paperwork{" "}
-              <span className="relative inline-block">
-                companion
-                <span className="absolute -bottom-1 left-0 right-0 h-2 rounded-full bg-gold/80" />
-              </span>
-            </h1>
-            <p className="max-w-lg text-lg text-slate-600">
-              From shift to progress note to invoice: speak naturally, review with an Audit Readiness Guide, and send
-              clearer records — without juggling five apps.
+      </section>
+
+      <section className="bg-pastel-cream py-16 md:py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 md:grid-cols-2">
+          <div>
+            <h2 className="font-serif-display text-3xl font-bold text-ink md:text-4xl">See the app in action</h2>
+            <p className="mt-4 text-slate-600">
+              Voice to progress note to invoice — built for unregistered sole traders. You review every note before it
+              is final.
             </p>
-            <div className="flex flex-wrap gap-3">
-              <CtaButton href="#join">Get started</CtaButton>
-              <a
-                href="#features"
-                className="inline-flex items-center rounded-full border border-ink/15 bg-white/70 px-6 py-3.5 text-sm font-bold text-ink hover:bg-white"
-              >
-                See how it works
-              </a>
+            <p className="mt-3 text-sm font-semibold text-teal">
+              Proof you showed up. Proof you delivered. Proof you get paid.
+            </p>
+            <div className="mt-6">
+              <CtaButton href="#join">Get early access</CtaButton>
             </div>
-            <p className="text-xs text-slate-500">You review every note before it is final · Voice processed, text stored</p>
           </div>
           <PhoneMockup />
-        </div>
-        <div className="mx-auto mt-12 max-w-6xl px-6">
-          <p className="mb-3 text-center text-xs font-semibold uppercase tracking-wider text-slate-400">
-            Proof you showed up. Proof you delivered. Proof you get paid.
-          </p>
-        </div>
-      </header>
-
-      {/* Features */}
-      <section id="features" className="bg-pastel-cream py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-6">
-          <h2 className="font-serif-display text-center text-4xl font-bold md:text-5xl">
-            The all-in-one app for sole trader support workers
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-slate-600">
-            Smarter shifts start here. Record, review, invoice, and stay audit-ready — in one workflow.
-          </p>
-          <div className="mt-14 grid gap-5 sm:grid-cols-2">
-            {features.map((f) => (
-              <article key={f.title} className={`${f.bg} rounded-4xl border border-white/80 p-8 shadow-card`}>
-                <span className="text-4xl" aria-hidden>
-                  {f.emoji}
-                </span>
-                <h3 className="mt-4 text-xl font-bold">{f.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{f.body}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -198,7 +153,7 @@ export default function Home() {
               <CtaButton href="#join">Join the beta</CtaButton>
             </div>
           </div>
-          <div className="rounded-4xl bg-gradient-to-br from-band-purple to-band-deep p-8 text-white shadow-soft">
+          <div className="rounded-4xl bg-gradient-to-br from-teal to-teal-dark p-8 text-white shadow-soft">
             <p className="text-sm font-semibold text-white/80">One shift →</p>
             <ul className="mt-4 space-y-3 text-lg font-semibold">
               <li>✓ Progress note</li>
@@ -360,6 +315,8 @@ export default function Home() {
           <p className="mt-6 text-sm text-slate-400">🔒 Data stored in Australia · You approve every note</p>
         </div>
       </section>
+
+      <FlyerTrustBar />
 
       {/* Footer */}
       <footer className="bg-[#0a1020] py-14 text-slate-300">

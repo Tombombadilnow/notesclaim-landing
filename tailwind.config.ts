@@ -7,7 +7,7 @@ const config: Config = {
       colors: {
         ink: "#0f172a",
         gold: "#d4af77",
-        teal: "#00c9cf",
+        accent: "#00c9cf",
         lavender: "#6b5fa8",
         "pastel-cream": "#faf8f5",
         "card-yellow": "#fff9e6",
@@ -18,6 +18,9 @@ const config: Config = {
         "hero-mist": "#dce8f5",
         "band-purple": "#5b4bb7",
         "band-deep": "#3d2f8f",
+        teal: "#0e5c6b",
+        "teal-dark": "#0a3d47",
+        "teal-light": "#1a7a8c",
       },
       fontFamily: {
         serif: ["'Playfair Display'", "Georgia", "serif"],

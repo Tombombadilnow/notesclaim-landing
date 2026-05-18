@@ -59,3 +59,11 @@ body {
 .animate-float {
   animation: float-soft 4s ease-in-out infinite;
 }
+
+.font-cursive {
+  font-family: "Caveat", "Segoe Script", cursive;
+}
+
+.bg-teal {
+  background-color: #0e5c6b;
+}

@@ -1,17 +1,12 @@
 import Image from "next/image";
+import { NCMark } from "./NCMark";
 
 function IconNote() {
   return (
     <svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden>
-      <rect x="10" y="8" width="24" height="32" rx="4" stroke="#0e5c6b" strokeWidth="2.5" />
-      <path d="M16 18h14M16 24h10" stroke="#0e5c6b" strokeWidth="2" strokeLinecap="round" />
-      <path
-        d="M30 34c0-4-2-6-6-6s-6 2-6 6"
-        stroke="#0e5c6b"
-        strokeWidth="2"
-        fill="#d4af77"
-        fillOpacity="0.35"
-      />
+      <rect x="10" y="8" width="24" height="32" rx="4" stroke="#3d8f96" strokeWidth="2.5" />
+      <path d="M16 18h14M16 24h10" stroke="#3d8f96" strokeWidth="2" strokeLinecap="round" />
+      <path d="M30 34c0-4-2-6-6-6s-6 2-6 6" stroke="#3d8f96" strokeWidth="2" fill="#d4af77" fillOpacity="0.4" />
     </svg>
   );
 }
@@ -21,12 +16,12 @@ function IconShield() {
     <svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden>
       <path
         d="M24 6L38 12v10c0 9-6 16-14 18-8-2-14-9-14-18V12L24 6z"
-        stroke="#0e5c6b"
+        stroke="#3d8f96"
         strokeWidth="2.5"
-        fill="#0e5c6b"
+        fill="#3d8f96"
         fillOpacity="0.08"
       />
-      <rect x="20" y="18" width="8" height="10" rx="2" stroke="#0e5c6b" strokeWidth="2" />
+      <rect x="20" y="18" width="8" height="10" rx="2" stroke="#3d8f96" strokeWidth="2" />
     </svg>
   );
 }
@@ -34,67 +29,67 @@ function IconShield() {
 function IconPeople() {
   return (
     <svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden>
-      <circle cx="18" cy="18" r="5" stroke="#0e5c6b" strokeWidth="2.5" />
-      <circle cx="32" cy="20" r="4" stroke="#0e5c6b" strokeWidth="2.5" />
-      <path d="M10 36c0-6 4-10 8-10s8 4 8 10M26 36c0-5 3-8 6-8s6 3 6 8" stroke="#0e5c6b" strokeWidth="2.5" />
+      <circle cx="18" cy="18" r="5" stroke="#3d8f96" strokeWidth="2.5" />
+      <circle cx="32" cy="20" r="4" stroke="#3d8f96" strokeWidth="2.5" />
+      <path d="M10 36c0-6 4-10 8-10s8 4 8 10M26 36c0-5 3-8 6-8s6 3 6 8" stroke="#3d8f96" strokeWidth="2.5" />
     </svg>
   );
 }
 
 export function FlyerHero() {
   return (
-    <header className="overflow-hidden bg-white">
-      {/* Teal brand band */}
-      <div className="bg-teal px-6 py-10 text-center text-white md:py-12">
-        <div className="mx-auto flex max-w-lg flex-col items-center">
-          <div className="flex items-end gap-1">
-            <span className="font-serif-display text-6xl font-bold leading-none text-[#1e3a5f] md:text-7xl">N</span>
-            <span className="font-serif-display text-6xl font-bold leading-none text-gold md:text-7xl">C</span>
-          </div>
-          <p className="mt-3 font-serif-display text-3xl font-bold tracking-tight md:text-4xl">
-            Notes<span className="text-gold">Claim</span>
-          </p>
-          <p className="mt-2 text-sm font-medium text-white/90 md:text-base">
-            NDIS made simple for frontline heroes
-          </p>
-        </div>
+    <header className="overflow-hidden bg-cream">
+      {/* Brand header — cream */}
+      <div className="px-6 pb-6 pt-10 text-center md:pt-12">
+        <NCMark />
+        <p className="mt-3 text-sm font-medium text-navy/75 md:text-base">
+          NDIS Made Simple for Frontline Heroes
+        </p>
       </div>
 
-      <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 py-10 md:grid-cols-2 md:py-14">
-        <div className="relative order-2 md:order-1">
+      {/* Hero row */}
+      <div className="relative mx-auto grid max-w-6xl items-end gap-6 px-6 pb-0 md:grid-cols-2 md:gap-10">
+        <div className="relative z-10 order-2 pb-8 md:order-1 md:pb-12">
           <div className="flex items-start gap-4">
             <div className="flex flex-col items-center gap-5 pt-2">
               <IconNote />
-              <div className="h-8 w-px border-l-2 border-dashed border-teal/40" />
+              <div className="h-10 w-px border-l-2 border-dashed border-brand-teal/50" />
               <IconShield />
-              <div className="h-8 w-px border-l-2 border-dashed border-teal/40" />
+              <div className="h-10 w-px border-l-2 border-dashed border-brand-teal/50" />
               <IconPeople />
             </div>
-            <p className="font-cursive text-2xl leading-snug text-[#2d7dd2] md:text-3xl">
+            <p className="font-cursive text-2xl leading-snug text-navy/80 md:text-[1.65rem]">
               Supporting you, so you can focus on what matters most.
             </p>
           </div>
         </div>
 
-        <div className="relative order-1 mx-auto w-full max-w-sm md:order-2 md:max-w-md">
-          <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-2xl">
+        <div className="relative order-1 md:order-2">
+          <div className="overflow-hidden rounded-t-3xl shadow-xl ring-1 ring-navy/10">
             <Image
               src="/images/notesclaim-flyer.png"
-              alt="NotesClaim — NDIS support worker app promotional overview"
-              width={600}
-              height={1200}
-              className="h-auto w-full object-cover object-top"
+              alt="NotesClaim — built for NDIS support workers"
+              width={720}
+              height={900}
+              className="h-auto w-full max-h-[min(520px,70vh)] object-cover object-top"
               priority
             />
           </div>
         </div>
       </div>
 
-      <div className="bg-teal px-6 py-8 text-center">
-        <h1 className="font-serif-display text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">
-          More time for clients.
+      {/* Teal wave into navy headline */}
+      <div className="relative -mb-px leading-[0]">
+        <svg viewBox="0 0 1440 56" preserveAspectRatio="none" className="block h-10 w-full md:h-14">
+          <path fill="#4fafb0" fillOpacity="0.35" d="M0,32 C480,56 960,8 1440,40 L1440,56 L0,56 Z" />
+        </svg>
+      </div>
+
+      <div className="bg-navy px-6 py-9 text-center md:py-11">
+        <h1 className="text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl lg:text-[2.75rem]">
+          More Time for Clients.
           <br />
-          Less admin chaos.
+          Less Admin Chaos.
         </h1>
       </div>
     </header>

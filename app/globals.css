@@ -9,61 +9,14 @@ body {
 
 body {
   font-family: "Inter", system-ui, sans-serif;
-  background: #faf8f5;
+  background: #faf9f6;
+  color: #0c2d48;
 }
 
 .font-serif-display {
   font-family: "Playfair Display", Georgia, serif;
 }
 
-.hero-sky-bg {
-  background:
-    radial-gradient(ellipse 80% 60% at 90% 10%, rgba(255, 220, 120, 0.45), transparent 55%),
-    radial-gradient(ellipse 70% 50% at 10% 20%, rgba(255, 255, 255, 0.9), transparent 50%),
-    linear-gradient(165deg, #ebe4f8 0%, #dce8f5 45%, #f5f0ff 100%);
-}
-
-.wavy-top {
-  margin-top: -1px;
-  line-height: 0;
-}
-
-.wavy-top svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.ribbon-text {
-  background: linear-gradient(90deg, #5b4bb7, #7c5cff, #5b4bb7);
-}
-
-.gradient-band {
-  background: linear-gradient(105deg, #ff6b8a 0%, #ff9a5c 55%, #ffb347 100%);
-}
-
-.press-logos {
-  filter: grayscale(1) opacity(0.55);
-}
-
-@keyframes float-soft {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-.animate-float {
-  animation: float-soft 4s ease-in-out infinite;
-}
-
 .font-cursive {
   font-family: "Caveat", "Segoe Script", cursive;
-}
-
-.bg-teal {
-  background-color: #0e5c6b;
 }

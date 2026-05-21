@@ -28,12 +28,12 @@ export function FlyerHero() {
           </div>
         </div>
 
-        <div className="relative order-1 h-[min(52vh,420px)] w-full md:order-2 md:h-auto md:min-h-[min(72vh,680px)] md:flex-1">
+        <div className="relative order-1 h-[min(52vh,480px)] w-full md:order-2 md:h-auto md:min-h-[min(72vh,680px)] md:flex-1">
           <Image
             src="/images/hero-founder.png"
             alt="NDIS support worker using NotesClaim after a shift"
             fill
-            className="object-cover object-[55%_15%] md:object-[50%_12%]"
+            className="object-contain object-top"
             sizes="(max-width: 768px) 100vw, 55vw"
             priority
           />

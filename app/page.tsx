@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Logo } from "@/components/landing/Logo";
 import { FAQ } from "@/components/landing/FAQ";
 import { FlyerHero } from "@/components/landing/FlyerHero";
+import { FourHooks } from "@/components/landing/FourHooks";
 import { FlyerStory } from "@/components/landing/FlyerStory";
 import { FlyerTrustBar } from "@/components/landing/FlyerTrustBar";
 import { WhyChooseBanner } from "@/components/landing/WhyChooseBanner";
@@ -58,6 +59,8 @@ export default function Home() {
       </nav>
 
       <FlyerHero />
+
+      <FourHooks />
 
       <FlyerStory />
 

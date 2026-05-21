@@ -4,41 +4,25 @@ import { useState } from "react";
 
 const ITEMS = [
   {
-    q: "Who is NotesClaim for?",
-    a: "Unregistered sole trader support workers with plan-managed or self-managed participants. If you write your own progress notes and send your own invoices — this is built for you, not agency dashboards with five-seat minimums.",
+    q: "Do I need to be a registered NDIS provider?",
+    a: "No. NotesClaim is built for unregistered sole traders.",
   },
   {
-    q: "How do I know I can trust NotesClaim?",
-    a: "Your notes and client data are stored on Australian servers (Sydney). Voice is processed to create your note — we keep the written record, not endless audio files. You review and approve every note before it is final.",
+    q: "Is my data safe?",
+    a: "Yes. All data is stored securely in Australia.",
   },
   {
-    q: "Is this only for registered NDIS providers?",
-    a: "No. NotesClaim is built for unregistered sole traders. We use Audit Readiness language as a guide to help you review your records — not an official assessment or certification.",
+    q: "What happens after the beta?",
+    a: "Beta is free. When we launch publicly, it's $9.99/month. Early testers lock in founding-member pricing.",
   },
   {
-    q: "Can I invoice from the same app?",
-    a: "Yes. Approve your note, then create a pre-filled invoice with the right NDIS line item and service dates — ready to review and send to your plan manager or coordinator.",
-  },
-  {
-    q: "What if my plan manager rejects an invoice?",
-    a: "Incomplete records are one of the most common reasons invoices get sent back. NotesClaim links your shift note to your invoice so dates, details, and line items stay consistent — fewer rejections, less rework.",
-  },
-  {
-    q: "Do you offer a free trial?",
-    a: "Beta access is free while we polish the app. Early beta testers will lock in founding-member pricing when billing goes live.",
-  },
-  {
-    q: "What makes this different from ChatGPT?",
-    a: "NotesClaim is purpose-built for NDIS shifts: structured progress notes, client goals, audit readiness checks, invoices, and PDFs — without copy-pasting between five apps or hoping generic AI got the NDIS wording right.",
-  },
-  {
-    q: "Do I still approve everything before it goes out?",
-    a: "Always. Nothing is final until you review it. NotesClaim drafts the note and invoice — you check, edit, and approve before anything is sent.",
+    q: "Do I need to change how I work?",
+    a: "No. Record a voice note or type after your shift — NotesClaim does the rest.",
   },
 ];
 
 export function FAQ() {
-  const [open, setOpen] = useState<number>(-1);
+  const [open, setOpen] = useState<number>(0);
 
   return (
     <section id="faq" className="py-16 md:py-20">

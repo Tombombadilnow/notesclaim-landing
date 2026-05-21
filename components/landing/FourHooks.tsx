@@ -1,8 +1,8 @@
 const HOOKS = [
-  "One rejected invoice can cost you hundreds. Your records should never be the weak link.",
+  "Your records should work for you — not against you.",
   "Speak your shift. We write the note.",
   "Shift done. Invoice sent. No catch-up.",
-  "Designed by workers, for workers. We've got you.",
+  "Built for sole traders. By someone who's been one.",
 ];
 
 export function FourHooks() {

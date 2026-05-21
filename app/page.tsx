@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import { Logo } from "@/components/landing/Logo";
 import { FAQ } from "@/components/landing/FAQ";
 import { FlyerHero } from "@/components/landing/FlyerHero";
-import { FourHooks } from "@/components/landing/FourHooks";
 import { FlyerStory } from "@/components/landing/FlyerStory";
 import { FlyerTrustBar } from "@/components/landing/FlyerTrustBar";
 import { WhyChooseBanner } from "@/components/landing/WhyChooseBanner";
@@ -33,8 +32,8 @@ function CtaButton({
 export default function Home() {
   return (
     <main className="text-navy">
-      <div className="bg-gold/25 px-4 py-2.5 text-center text-sm font-semibold text-navy">
-        Free during beta — then $9.99/month. Cancel anytime. Early testers lock in founding-member pricing.
+      <div  className="bg-gold/25 py-2.5 text-center text-sm font-semibold text-navy">
+        ✨ Beta is free for early NDIS sole traders — lock in founding-member pricing
       </div>
 
       <nav className="sticky top-0 z-50 border-b border-navy/10 bg-cream/95 backdrop-blur-md">
@@ -59,8 +58,6 @@ export default function Home() {
       </nav>
 
       <FlyerHero />
-
-      <FourHooks />
 
       <FlyerStory />
 

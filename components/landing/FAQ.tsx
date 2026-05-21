@@ -4,25 +4,29 @@ import { useState } from "react";
 
 const ITEMS = [
   {
-    q: "Do I need to be a registered NDIS provider?",
-    a: "No. NotesClaim is built for unregistered sole traders.",
+    q: "How do I know I can trust NotesClaim?",
+    a: "Your notes and client data are stored on Australian servers (Sydney). Voice is processed to create your note — we keep the written record, not endless audio files. You review and approve every note before it is final.",
   },
   {
-    q: "Is my data safe?",
-    a: "Yes. All data is stored securely in Australia.",
+    q: "Is this only for registered NDIS providers?",
+    a: "NotesClaim is built for unregistered sole trader support workers — plan-managed and self-managed participants. We use Audit Readiness language as a guide, not an official assessment.",
   },
   {
-    q: "What happens after the beta?",
-    a: "Beta is free. When we launch publicly, it's $9.99/month. Early testers lock in founding-member pricing.",
+    q: "Do you offer a free trial?",
+    a: "Beta access is free while we polish the app. Early beta testers will lock in founding-member pricing when billing goes live.",
   },
   {
-    q: "Do I need to change how I work?",
-    a: "No. Record a voice note or type after your shift — NotesClaim does the rest.",
+    q: "Can I invoice from the same app?",
+    a: "Yes. Approve your note, then create a pre-filled invoice with the right NDIS line item — ready to review and send to your plan manager or coordinator.",
+  },
+  {
+    q: "What makes this different from ChatGPT?",
+    a: "NotesClaim is purpose-built for NDIS shifts: STAR-style notes, client goals, audit readiness checks, invoices, and PDFs — without copy-pasting between five apps.",
   },
 ];
 
 export function FAQ() {
-  const [open, setOpen] = useState<number>(0);
+  const [open, setOpen] = useState(0);
 
   return (
     <section id="faq" className="py-16 md:py-20">

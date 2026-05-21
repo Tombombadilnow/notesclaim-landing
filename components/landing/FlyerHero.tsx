@@ -33,7 +33,7 @@ export function FlyerHero() {
             src="/images/hero-founder.png"
             alt="NDIS support worker using NotesClaim after a shift"
             fill
-            className="object-cover object-top"
+            className="object-cover object-[55%_15%] md:object-[50%_12%]"
             sizes="(max-width: 768px) 100vw, 55vw"
             priority
           />

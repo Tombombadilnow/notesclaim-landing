@@ -8,8 +8,8 @@ export function FlyerHero() {
         <NCMark />
       </div>
 
-      <div className="flex flex-col md:flex-row md:items-center">
-        <div className="relative z-10 order-2 flex flex-1 flex-col justify-center px-6 py-8 md:order-1 md:py-10 md:pl-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] md:pr-10">
+      <div className="flex flex-col md:min-h-[min(72vh,680px)] md:flex-row">
+        <div className="relative z-10 order-2 flex flex-1 flex-col justify-center px-6 py-8 md:order-1 md:py-12 md:pl-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] md:pr-10">
           <div className="mx-auto w-full max-w-lg md:mx-0">
             <h1 className="font-serif-display text-3xl font-bold leading-tight tracking-tight text-navy md:text-4xl lg:text-[2.75rem]">
               Stop writing notes from memory at 10pm.
@@ -28,15 +28,18 @@ export function FlyerHero() {
           </div>
         </div>
 
-        <div className="relative order-1 flex w-full justify-center bg-cream px-4 pb-4 pt-2 md:order-2 md:flex-1 md:px-8 md:pb-6">
+        <div className="relative order-1 h-[min(52vh,420px)] w-full md:order-2 md:h-auto md:min-h-[min(72vh,680px)] md:flex-1">
           <Image
             src="/images/hero-founder.png"
             alt="NDIS support worker using NotesClaim after a shift"
-            width={312}
-            height={432}
-            className="h-auto w-full max-w-[min(100%,22rem)] md:max-w-[min(100%,26rem)]"
-            sizes="(max-width: 768px) 100vw, 26rem"
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 768px) 100vw, 55vw"
             priority
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-cream via-cream/40 to-transparent md:via-cream/20"
+            aria-hidden
           />
         </div>
       </div>

@@ -62,7 +62,7 @@ export function FlyerHero() {
           </div>
         </div>
 
-        <div className="relative order-1 h-[min(52vh,420px)] w-full md:order-2 md:h-auto md:min-h-[min(72vh,680px)] md:flex-1">
+        <div className="relative order-1 h-[min(52vh,420px)] w-full bg-cream md:order-2 md:h-auto md:min-h-[min(72vh,680px)] md:flex-1">
           <Image
             src="/images/hero-founder.png"
             alt="NDIS support worker — NotesClaim is built for frontline heroes"

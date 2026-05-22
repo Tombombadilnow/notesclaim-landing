@@ -31,7 +31,7 @@ function CtaButton({
 
 export default function Home() {
   return (
-    <main className="text-navy">
+    <main className="min-h-screen bg-cream text-navy">
       <div  className="bg-gold/25 py-2.5 text-center text-sm font-semibold text-navy">
         ✨ Beta is free for early NDIS sole traders — lock in founding-member pricing
       </div>

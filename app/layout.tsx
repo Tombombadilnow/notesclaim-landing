@@ -5,11 +5,12 @@ export const metadata: Metadata = {
   title: "NotesClaim — Voice to NDIS note in under 60 seconds",
   description:
     "Speak your shift. Get a compliant NDIS progress note and invoice. Built for unregistered sole trader support workers.",
+  themeColor: "#faf9f6",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-cream">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

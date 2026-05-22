@@ -67,7 +67,7 @@ export function FlyerHero() {
             src="/images/hero-founder.png"
             alt="NDIS support worker — NotesClaim is built for frontline heroes"
             fill
-            className="object-cover object-[55%_15%] md:object-[50%_12%]"
+            className="object-cover object-top"
             sizes="(max-width: 768px) 100vw, 55vw"
             priority
           />

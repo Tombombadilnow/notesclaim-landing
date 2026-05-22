@@ -46,7 +46,7 @@ export function FlyerHero() {
         </p>
       </div>
 
-      <div className="flex flex-col md:min-h-[min(72vh,680px)] md:flex-row">
+      <div className="flex flex-col md:flex-row md:items-stretch">
         <div className="relative z-10 order-2 flex flex-1 flex-col justify-center px-6 py-8 md:order-1 md:py-12 md:pl-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] md:pr-10">
           <div className="mx-auto flex w-full max-w-md items-start gap-4 md:mx-0 md:max-w-lg">
             <div className="flex flex-col items-center gap-5 pt-2">
@@ -62,7 +62,7 @@ export function FlyerHero() {
           </div>
         </div>
 
-        <div className="relative order-1 h-[min(52vh,420px)] w-full bg-cream md:order-2 md:h-auto md:min-h-[min(72vh,680px)] md:flex-1">
+        <div className="relative order-1 aspect-[5/6] w-full max-h-[min(50vh,440px)] bg-cream md:order-2 md:aspect-auto md:max-h-[min(56vh,560px)] md:min-h-[480px] md:flex-1">
           <Image
             src="/images/hero-founder.png"
             alt="NDIS support worker — NotesClaim is built for frontline heroes"
